@@ -5,12 +5,12 @@ from com.company.service import video_processing_service
 app = Flask(__name__)
 
 
-@app.route('/download_video')
+@app.route('/download-video')
 def download_video(text):
     return text
 
 
-@app.route('/process_video')
+@app.route('/process-video')
 def process_video():
     file_name_with_format = request.args.get('file_name_with_format')
     time_from_in_seconds = request.args.get('time_from_in_seconds', type=int)
