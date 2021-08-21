@@ -17,7 +17,7 @@ def process_video(file_name_with_format, time_from_in_seconds, time_to_in_second
 
 
 def cut_video_by_frame(file_name_with_format, time_from_in_seconds, time_to_in_seconds, video_processing_id):
-    video_processing_repository.set_status(video_processing_id, 'division_by_frame_begun')
+    video_processing_repository.set_status(video_processing_id, 'in_process')
 
     path_to_save_folder = get_path_to_save_folder(file_name_with_format, video_processing_id)
     create_folder(path_to_save_folder)
@@ -37,8 +37,6 @@ def cut_video_by_frame(file_name_with_format, time_from_in_seconds, time_to_in_s
     for i in range(count_of_frames):
         ret, frame = video_capture.read()
         cv2.imwrite(f"{path_to_save_folder}/{i}.png", frame)
-
-    video_processing_repository.set_status(video_processing_id, 'divided')
 
     return count_of_frames, frame_rate
 
@@ -77,7 +75,6 @@ def get_frame(time_in_seconds, frame_rate):
 
 
 def save_video_from_frames(file_name_with_format, video_processing_id, count_of_frames, frame_rate):
-    video_processing_repository.set_status(video_processing_id, 'saving_from_frames_begun')
     out_file_name_with_format = get_out_filename_with_format(file_name_with_format)
     path_to_save_folder = get_path_to_save_folder(file_name_with_format, video_processing_id)
 
@@ -89,7 +86,7 @@ def save_video_from_frames(file_name_with_format, video_processing_id, count_of_
         out.write(img)
 
     out.release()
-    video_processing_repository.set_status(video_processing_id, 'saved')
+    video_processing_repository.set_status(video_processing_id, 'processed')
 
 
 def get_out_filename_with_format(file_name_with_format):
