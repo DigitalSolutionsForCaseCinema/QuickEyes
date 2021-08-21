@@ -98,3 +98,7 @@ def get_out_filename_with_format(file_name_with_format):
 def get_format_by_filename_with_format(file_name_with_format):
     splitting_by_dots = file_name_with_format.split(".")
     return splitting_by_dots[1]
+
+
+def get_all_with_status(status):
+    return video_processing_repository.select_all_with_status(status)

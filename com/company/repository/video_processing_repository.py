@@ -33,3 +33,12 @@ def set_status(video_processing_id, status):
         sql = "UPDATE video_processing SET status = %s WHERE id = %s"
         cursor.execute(sql, (status, video_processing_id))
         connection.commit()
+
+
+def select_all_with_status(status):
+    with connection.cursor() as cursor:
+        sql = "SELECT * FROM video_processing WHERE status = %s"
+        cursor.execute(sql, (status,))
+        video_processing_list = cursor.fetchall()
+        connection.commit()
+    return video_processing_list
