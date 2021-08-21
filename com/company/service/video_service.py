@@ -1,15 +1,18 @@
 import math
 import cv2
+from com.company.repository import video_repository
 
 path_to_root_folder = "/home/user/videoEditor"
 
 
 def process_video(file_name_with_format, time_from_in_milliseconds, time_to_in_milliseconds):
+    video_repository.insert_video(file_name_with_format)
     count_of_frames = cut_video_by_frame(file_name_with_format, time_from_in_milliseconds, time_to_in_milliseconds)
     save_video_from_frames(file_name_with_format, count_of_frames)
 
 
 def cut_video_by_frame(file_name_with_format, time_from_in_milliseconds, time_to_in_milliseconds):
+    video_repository.set_status(file_name_with_format, 'division_by_frame_begun')
     splitting_by_dots = file_name_with_format.split(".")
     file_name = splitting_by_dots[0]
 
@@ -31,10 +34,13 @@ def cut_video_by_frame(file_name_with_format, time_from_in_milliseconds, time_to
         ret, frame = cap.read()
         cv2.imwrite(f"{path_to_save_folder}/{i}.png", frame)
 
+    video_repository.set_status(file_name_with_format, 'divided')
+
     return count_of_frames
 
 
 def save_video_from_frames(file_name_with_format, count_of_frames):
+    video_repository.set_status(file_name_with_format, 'saving_from_frames_begun')
     splitting_by_dots = file_name_with_format.split(".")
     file_name = splitting_by_dots[0]
     file_format = splitting_by_dots[1]
@@ -51,3 +57,4 @@ def save_video_from_frames(file_name_with_format, count_of_frames):
         out.write(img)
 
     out.release()
+    video_repository.set_status(file_name_with_format, 'saved')
