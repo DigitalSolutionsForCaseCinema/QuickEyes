@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<title>QuickEyes</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="description" content="Mooli Bootstrap 4x admin is super flexible, powerful, clean &amp; modern responsive admin dashboard with unlimited possibilities.">
+<meta name="author" content="GetBootstrap, design by: puffintheme.com">
+
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- VENDOR CSS -->
+<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/vendor/animate-css/vivify.min.css">
+
+<link rel="stylesheet" href="assets/vendor/dropify/css/dropify.min.css">
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="assets/css/mooli.min.css">
+
+</head>
+<body>
+
+<div id="body" class="theme-cyan">
+
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="m-t-30"><img src="assets/images/icon.svg" width="40" height="40" alt="Mooli"></div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+
+    <!-- Theme Setting -->
+
+
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+
+    <div id="wrapper">
+
+        <!-- Page top navbar -->
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+
+                <div class="navbar-right">
+                    <div id="navbar-menu">
+                        <ul class="nav navbar-nav">
+
+
+
+
+
+                            <li class="hidden-xs"><a href="javascript:void(0);" id="btnFullscreen" class="icon-menu"><i class="fa fa-arrows-alt"></i></a></li>
+                            <li><a href="page-login.html" class="icon-menu"><i class="fa fa-power-off"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- Main left sidebar menu -->
+        <div id="left-sidebar" class="sidebar">
+            <a href="#" class="menu_toggle"><i class="fa fa-angle-left"></i></a>
+            <div class="navbar-brand">
+                <a href="index.html"><img src="assets/images/icon.svg" alt="Mooli Logo" class="img-fluid logo"><span>QuickEyes</span></a>
+                <button type="button" class="btn-toggle-offcanvas btn btn-sm float-right"><i class="lnr lnr-menu fa fa-chevron-circle-left"></i></button>
+            </div>
+            <div class="sidebar-scroll">
+
+                <nav id="left-sidebar-nav" class="sidebar-nav">
+                    <ul id="main-menu" class="metismenu animation-li-delay">
+
+                        <li><a href="index.html"><i class="fa fa-dashboard"></i> <span>Главная</span></a></li>
+                        <li><a href="app-filemanager.html"><i class="fa fa-folder"></i> <span>Менеджер Файлов</span></a></li>
+
+                            
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- Main body part  -->
+        <div id="main-content">
+            <div class="container-fluid">
+                <!-- Page header section  -->
+                <div class="block-header">
+                    <div class="row clearfix">
+                        <div class="col-xl-6 col-md-5 col-sm-12">
+                            <h1>Привет, Admin22</h1>
+                            <span>Этот файл менеджер позволит загружать ваши видеофайлы и наблюдать прогресс обработки видео</span>
+                        </div>
+                        <div class="col-xl-6 col-md-7 col-sm-12 text-md-right">
+                            <div class="d-flex align-items-center justify-content-md-end mt-4 mt-md-0 flex-wrap vivify pullUp delay-550">
+
+
+
+                                <div class="mb-3 mb-xl-0">
+                                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#addnote">Удалить Файлы</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				<div class="card">
+					<div class="header">
+                        <h2>Здесь вы можете загрузить видео <small>только файлы Full HD разрешения </small></h2>
+                        </div>
+                        <div class="body">
+                        <input type="file" class="dropify-fr">
+                    </div>
+                </div>
+                                
+
+
+
+
+                <div class="row clearfix">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="header">
+                                <h2>Типы Файлов</h2>
+                            </div>
+                            <div class="body">
+                                <div class="file_folder">
+
+                                    <a href="javascript:void(0);">
+                                        <div class="icon">
+                                            <i class="fa fa-folder text-muted"></i>
+                                        </div>
+                                        <div class="file-name">
+                                            <p class="mb-0 text-muted">В очереди</p>
+                                            <small>815 File, 1.2GB</small>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:void(0);">
+                                        <div class="icon">
+                                            <i class="fa fa-folder text-red"></i>
+                                        </div>
+                                        <div class="file-name">
+                                            <p class="mb-0 text-muted">На обработке</p>
+                                            <small>23 File, 22MB</small>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:void(0);">
+                                        <div class="icon">
+                                            <i class="fa fa-folder text-info"></i>
+                                        </div>
+                                        <div class="file-name">
+                                            <p class="mb-0 text-muted">Обработаны</p>
+                                            <small>67 File, 92MB</small>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="section_title">
+                            <div class="mr-3">
+                                <h3>Список файлов</h3>
+                                <small>Здесь вы можете увидеть список загруженных файлов</small>
+                            </div>
+                            <div>
+                                <div class="btn-group mb-3">
+                                    <div class="btn-group" role="group">
+                                        <button id="btnGroupDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Все файлы</button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="javascript:void(0);">В очереди</a>
+                                            <a class="dropdown-item" href="javascript:void(0);">На обработке</a>
+                                            <a class="dropdown-item" href="javascript:void(0);">Обработаны</a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table_custom text-nowrap spacing5 mb-0">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>Прогресс</th>
+                                                <th>Название Файла</th>
+
+                                                <th>Отправитель</th>
+                                                <th>Последние Обновления</th>
+                                                <th class="text-right">Размер Файла</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <tr>
+                                                <td class="width45">
+                                                    <i class="fa fa-folder"></i>
+                                                    <div class="progress progress-xs progress-transparent mb-0 mt-3">
+                                                        <div class="progress-bar bg-red" data-transitiongoal="0" style="width: 21%;" aria-valuenow="21"></div>
+                                                    </div>
+                                                </td>
+
+                                                <td>
+                                                    <span class="folder-name">Серия 6</span>
+                                                </td>
+
+                                                <td class="w100">
+                                                    <span>Admin22</span>
+                                                </td>
+                                                <td class="w100">
+                                                    <span>Aug 21, 2021</span>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span class="size"> 250MB </span>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="width45">
+                                                    <i class="fa fa-folder text-info"></i>
+                                                    <div class="progress progress-xs progress-transparent mb-0 mt-3">
+                                                        <div class="progress-bar bg-info" data-transitiongoal="100" style="width: 21%;" aria-valuenow="21"></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="folder-name">Серия 5</span>
+                                                </td>
+
+                                                <td class="w100">
+                                                    <span>Admin22</span>
+                                                </td>
+                                                <td class="w100">
+                                                    <span>Aug 21, 2021</span>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span class="size"> 150MB </span>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="width45">
+                                                    <i class="fa fa-folder text-danger"></i>
+                                                    <div class="progress progress-xs progress-transparent mb-0 mt-3">
+                                                        <div class="progress-bar bg-danger" data-transitiongoal="50" style="width: 21%;" aria-valuenow="21"></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="folder-name">Серия 4</span>
+                                                </td>
+
+                                                <td class="w100">
+                                                    <span>Admin22</span>
+                                                </td>
+                                                <td class="w100">
+                                                    <span>Aug 21, 2021</span>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span class="size"> 50MB </span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Javascript -->
+<script src="assets/bundles/libscripts.bundle.js"></script>
+<script src="assets/bundles/vendorscripts.bundle.js"></script>
+
+<!-- Vedor js file and create bundle with grunt  -->
+<script src="assets/vendor/dropify/js/dropify.js"></script>
+
+
+<!-- Project core js file minify with grunt -->
+<script src="assets/bundles/mainscripts.bundle.js"></script>
+<script src="../js/pages/forms/dropify.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<title>QuickEyes</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- VENDOR CSS -->
+<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/vendor/jquery-steps/jquery.steps.css">
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="assets/css/mooli.min.css">
+
+
+
+<link rel="stylesheet" href="assets/vendor/animate-css/vivify.min.css">
+
+<link rel="stylesheet" href="assets/vendor/dropify/css/dropify.min.css">
+
+
+
+</head>
+<body>
+
+<div id="body" class="theme-cyan">
+
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="m-t-30"><img src="assets/images/icon.svg" width="40" height="40" alt="Mooli"></div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+
+    <!-- Theme Setting -->
+
+
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+
+    <div id="wrapper">
+
+        <!-- Page top navbar -->
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+
+                <div class="navbar-right">
+                    <div id="navbar-menu">
+                        <ul class="nav navbar-nav">
+
+
+
+
+
+                            <li class="hidden-xs"><a href="javascript:void(0);" id="btnFullscreen" class="icon-menu"><i class="fa fa-arrows-alt"></i></a></li>
+                            <li><a href="page-login.html" class="icon-menu"><i class="fa fa-power-off"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- Main left sidebar menu -->
+        <div id="left-sidebar" class="sidebar">
+            <a href="#" class="menu_toggle"><i class="fa fa-angle-left"></i></a>
+            <div class="navbar-brand">
+                <a href="index.html"><img src="assets/images/icon.svg" alt="Mooli Logo" class="img-fluid logo"><span>QuickEyes</span></a>
+                <button type="button" class="btn-toggle-offcanvas btn btn-sm float-right"><i class="lnr lnr-menu fa fa-chevron-circle-left"></i></button>
+            </div>
+            <div class="sidebar-scroll">
+
+                <nav id="left-sidebar-nav" class="sidebar-nav">
+                    <ul id="main-menu" class="metismenu animation-li-delay">
+
+                        <li><a href="index.html"><i class="fa fa-dashboard"></i> <span>Главная</span></a></li>
+                        <li><a href="app-filemanager.html"><i class="fa fa-folder"></i> <span>Менеджер Файлов</span></a></li>
+
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+
+        <!-- Main body part  -->
+        <div id="main-content">
+            <div class="container-fluid">
+                <!-- Page header section  -->
+                <div class="block-header">
+                    <div class="row clearfix">
+                        <div class="col-xl-6 col-md-5 col-sm-12">
+                            <h1>Привет, Admin22</h1>
+                            <span>С этого раздела начинается обработка вашего видео</span>
+                        </div>
+                        <div class="col-xl-6 col-md-7 col-sm-12 text-md-right">
+                            <div class="d-flex align-items-center justify-content-md-end mt-4 mt-md-0 flex-wrap vivify pullUp delay-550">
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="card">
+                            <div class="header">
+                                <h2>Начните работу прямо сейчас</h2>
+                                <ul class="header-dropdown dropdown">
+
+                                    <li><a href="javascript:void(0);" class="full-screen"><i class="fa fa-expand"></i></a></li>
+                                    <li class="dropdown">
+                                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                                        <ul class="dropdown-menu theme-bg gradient">
+                                            <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-eye"></i> View Details</a></li>
+                                            <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-share-alt"></i> Share</a></li>
+                                            <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-copy"></i> Copy to</a></li>
+                                            <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-folder"></i> Move to</a></li>
+                                            <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-edit"></i> Rename</a></li>
+                                            <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-trash"></i> Delete</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="body">
+                                <div id="wizard_horizontal">
+                                    <h2>Зарузите Видеофайл</h2>
+                                    <section>
+
+                                        <div class="card">
+                                            <div class="header">
+                                                <h2>После загрузки наша система проанализирует видео <small>Используйте только файлы Full HD разрешения </small></h2>
+                                            </div>
+                                            <div class="body">
+                                                <input type="file" class="dropify-fr">
+                                            </div>
+                                        </div>
+
+                                    </section>
+                                    <h2>Выберите Опции</h2>
+                                    <section>
+                                        <p>Пока пусто </p>
+                                    </section>
+                                    <h2>Получите результат</h2>
+                                    <section>
+                                        <p> Пока пусто </p>
+                                    </section>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Javascript -->
+<script src="assets/bundles/libscripts.bundle.js"></script>
+<script src="assets/bundles/vendorscripts.bundle.js"></script>
+
+<!-- Vedor js file and create bundle with grunt  -->
+<script src="assets/vendor/jquery-validation/jquery.validate.js"></script><!-- Jquery Validation Plugin Css -->
+<script src="assets/vendor/jquery-steps/jquery.steps.js"></script><!-- JQuery Steps Plugin Js -->
+
+
+<!-- Project core js file minify with grunt -->
+<script src="assets/bundles/mainscripts.bundle.js"></script>
+<script src="../js/pages/forms/form-wizard.js"></script>
+
+
+
+<!-- Vedor js file and create bundle with grunt  -->
+<script src="assets/vendor/dropify/js/dropify.js"></script>
+
+
+
+<script src="../js/pages/forms/dropify.js"></script>
+</body>
+</html>
