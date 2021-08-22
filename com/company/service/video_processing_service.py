@@ -100,7 +100,7 @@ def save_video_from_frames(file_name_with_format, video_processing_id, count_of_
     out_file_name_with_format = get_out_filename_with_format(file_name_with_format)
     path_to_save_folder = get_path_to_save_folder(file_name_with_format, video_processing_id)
 
-    out = cv2.VideoWriter(out_file_name_with_format, cv2.VideoWriter_fourcc(*'mp4v'), frame_rate, frame_size)
+    out = cv2.VideoWriter(path_to_save_folder + '/' + out_file_name_with_format, cv2.VideoWriter_fourcc(*'mp4v'), frame_rate, frame_size)
 
     for i in range(count_of_frames + 1):
         filename = path_to_save_folder + '/' + str(i) + ".png"
