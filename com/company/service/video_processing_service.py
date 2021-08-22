@@ -27,16 +27,16 @@ def cut_video_by_frame(file_name_with_format, time_from_in_seconds, time_to_in_s
     frame_rate = get_frame_rate(video_capture)
 
     frame_from = get_frame(time_from_in_seconds, frame_rate)
-    frame_to = get_frame(time_to_in_seconds, frame_rate)
-
-    count_of_frames = frame_to - frame_from + 1
 
     for i in range(frame_from - 1):
         video_capture.read()
 
-    for i in range(count_of_frames):
-        ret, frame = video_capture.read()
-        cv2.imwrite(f"{path_to_save_folder}/{i}.png", frame)
+    if time_to_in_seconds == -1:
+        count_of_frames = save_frames_to_end_of_video(video_capture, path_to_save_folder)
+    else:
+        frame_to = get_frame(time_to_in_seconds, frame_rate)
+        count_of_frames = frame_to - frame_from + 1
+        save_certain_count_of_frames(count_of_frames, video_capture, path_to_save_folder)
 
     return count_of_frames, frame_rate
 
@@ -72,6 +72,28 @@ def get_frame_rate(video_capture):
 
 def get_frame(time_in_seconds, frame_rate):
     return math.floor(time_in_seconds * frame_rate)
+
+
+def save_certain_count_of_frames(count_of_frames, video_capture, path_to_save_folder):
+    for i in range(count_of_frames):
+        save_frame(video_capture, path_to_save_folder, i)
+
+
+def save_frames_to_end_of_video(video_capture, path_to_save_folder):
+    i = 0
+    while True:
+        try:
+            save_frame(video_capture, path_to_save_folder, i)
+        except cv2.error:
+            break
+        i += 1
+    return i
+
+
+def save_frame(video_capture, path_to_save_folder, i):
+    ret, frame = video_capture.read()
+    cv2.imwrite(f"{path_to_save_folder}/{i}.png", frame)
+    return frame
 
 
 def save_video_from_frames(file_name_with_format, video_processing_id, count_of_frames, frame_rate):
